@@ -23,7 +23,7 @@
     }
 
     .logo {
-      width: 70px;
+      width: 180px;
       height: auto;
       border-radius: 50%;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -51,12 +51,20 @@
       animation-delay: 0.7s;
     }
 
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1s;
+    }
+
     .btn {
-      display: block;
       background-color: #f8bfd0;
       color: white;
       text-decoration: none;
-      margin: 12px auto;
       padding: 14px 20px;
       border-radius: 10px;
       width: 85%;
@@ -65,27 +73,11 @@
       font-weight: 500;
       transition: all 0.3s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s ease forwards;
     }
-
-    .btn:nth-of-type(1) { animation-delay: 1.0s; }
-    .btn:nth-of-type(2) { animation-delay: 1.2s; }
-    .btn:nth-of-type(3) { animation-delay: 1.4s; }
 
     .btn:hover {
       background-color: #f3a6bc;
       transform: translateY(-2px);
-    }
-
-    footer {
-      margin-top: 40px;
-      color: #aaa;
-      font-size: 14px;
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
-      animation-delay: 1.8s;
     }
 
     /* ===== Animations ===== */
@@ -107,19 +99,15 @@
 </head>
 <body>
   <div class="container">
-    <!-- شعار Daliola -->
     <img src="IMG-20251025-WA0003.jpg" alt="Daliola Logo" class="logo">
-    
-    <!-- العنوان المؤقت -->
     <h1>مرحبًا بك في Daliola</h1>
     <p>تابعينا على الروابط التالية 💕</p>
 
-    <!-- الأزرار -->
-    <a href="#" class="btn">جروب واتساب</a>
-    <a href="#" class="btn">صفحة فيسبوك</a>
-    <a href="#" class="btn">جروب فيسبوك</a>
-
-    <footer>© 2025 Daliola</footer>
+    <div class="buttons">
+      <a href="#" class="btn">جروب واتساب</a>
+      <a href="#" class="btn">صفحة فيسبوك</a>
+      <a href="#" class="btn">جروب فيسبوك</a>
+    </div>
   </div>
 </body>
 </html>
