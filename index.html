@@ -2,39 +2,87 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>روابطي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daliola</title>
   <style>
     body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: "Poppins", "Cairo", sans-serif;
+      background: linear-gradient(180deg, #ffe6f0 0%, #fff 100%);
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 40px;
-      direction: rtl;
+      color: #333;
     }
-    h1 { color: #222; }
-    a {
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .btn {
       display: block;
-      width: 280px;
-      margin: 10px auto;
-      padding: 12px;
-      background: #007bff;
+      background-color: #f8bfd0; /* وردي باهت زي الزهور */
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
+      margin: 12px auto;
+      padding: 14px 20px;
+      border-radius: 10px;
+      width: 85%;
+      max-width: 300px;
+      font-size: 17px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-    a:hover { background: #0056b3; }
+
+    .btn:hover {
+      background-color: #f3a6bc;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>أهلاً بيك 👋</h1>
-  <p>دي اللينكات الجروبات اشترك بقا 🙂</p>
+  <div class="container">
+    <!-- ضع شعارك هنا -->
+    <img src="IMG-20251025-WA0003.jpg" alt="Daliola Logo" class="logo">
+    
+    <!-- العنوان الرئيسي placeholder -->
+    <h1>مرحبًا بك في Daliola</h1>
+    <p>تابعينا على الروابط التالية 💕</p>
 
-  <a href="https://chat.whatsapp.com/رابط_جروب_الواتس" target="_blank">جروب واتساب</a>
-  <a href="https://www.facebook.com/رابط_صفحة_الفيس" target="_blank">صفحة فيسبوك</a>
-  <a href="https://www.facebook.com/groups/رابط_جروب_الفيس" target="_blank">جروب فيسبوك</a>
+    <!-- روابط الأزرار (هنضيفها لاحقًا) -->
+    <a href="#" class="btn">جروب واتساب</a>
+    <a href="#" class="btn">صفحة فيسبوك</a>
+    <a href="#" class="btn">جروب فيسبوك</a>
 
-  <p style="margin-top:30px;color:#555;">تم تصميم الصفحة باستخدام GitHub Pages ❤️</p>
+    <footer>© 2025 Daliola</footer>
+  </div>
 </body>
 </html>
