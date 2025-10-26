@@ -12,37 +12,48 @@
       padding: 0;
       text-align: center;
       color: #333;
+      overflow-x: hidden;
     }
 
     .container {
       max-width: 500px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease forwards;
     }
 
     .logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 70%;
+      width: 180px;
+      height: auto;
+      border-radius: 50%;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 50px;
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: slideDown 1s ease forwards;
     }
 
     h1 {
       font-size: 28px;
       margin-bottom: 10px;
       color: #444;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 0.4s;
     }
 
     p {
       color: #666;
       margin-bottom: 30px;
       font-size: 16px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 0.7s;
     }
 
     .btn {
       display: block;
-      background-color: #f8bfd0; /* وردي باهت زي الزهور */
+      background-color: #f8bfd0;
       color: white;
       text-decoration: none;
       margin: 12px auto;
@@ -54,7 +65,14 @@
       font-weight: 500;
       transition: all 0.3s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
     }
+
+    .btn:nth-of-type(1) { animation-delay: 1.0s; }
+    .btn:nth-of-type(2) { animation-delay: 1.2s; }
+    .btn:nth-of-type(3) { animation-delay: 1.4s; }
 
     .btn:hover {
       background-color: #f3a6bc;
@@ -65,19 +83,38 @@
       margin-top: 40px;
       color: #aaa;
       font-size: 14px;
-    } 
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1.8s;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- ضع شعارك هنا -->
+    <!-- شعار Daliola -->
     <img src="IMG-20251025-WA0003.jpg" alt="Daliola Logo" class="logo">
     
-    <!-- العنوان الرئيسي placeholder -->
+    <!-- العنوان المؤقت -->
     <h1>مرحبًا بك في Daliola</h1>
     <p>تابعينا على الروابط التالية 💕</p>
 
-    <!-- روابط الأزرار (هنضيفها لاحقًا) -->
+    <!-- الأزرار -->
     <a href="#" class="btn">جروب واتساب</a>
     <a href="#" class="btn">صفحة فيسبوك</a>
     <a href="#" class="btn">جروب فيسبوك</a>
